@@ -29,7 +29,7 @@ export function Hero({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 's
   {/* ~60% black overlay to darken the video for legibility (user requested 60-70%) */}
   <div className="absolute inset-0 z-10 bg-black/60"></div>
   {/* subtle gradient on top of the base black layer for depth */}
-  <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/40 via-black/30 to-black/20 pointer-events-none"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50 pointer-events-none"></div>
       </div>
 
   <div className="relative z-20 max-w-7xl mx-auto px-4 w-full">
