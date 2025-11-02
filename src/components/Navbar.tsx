@@ -228,9 +228,10 @@ export function Navbar({
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 text-white" />
               ) : (
-                <Menu className="w-6 h-6" />
+                // Make the hamburger (three lines) royal dark blue
+                <Menu className="w-6 h-6 text-blue-900" />
               )}
             </button>
           </div>
