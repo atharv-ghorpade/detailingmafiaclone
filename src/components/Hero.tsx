@@ -26,7 +26,8 @@ export function Hero({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 's
           playsInline
           poster=""
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50"></div>
+  {/* softened overlay so the background video remains visible */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/30 to-black/20"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
