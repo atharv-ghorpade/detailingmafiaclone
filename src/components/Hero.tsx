@@ -5,7 +5,7 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import bgVideo from "../assets/videoplayback.mp4";
 
 export function Hero({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 'services' | 'experience' | 'blog' | 'contact' | 'booking') => void }) {
   return (
@@ -13,12 +13,18 @@ export function Hero({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 's
       id="home"
       className="relative min-h-screen flex items-center pt-32 pb-20"
     >
-      {/* Background image with overlay */}
+      {/* Background video with overlay
+          Note: place your video file at `src/assets/videoplayback.mp4` so Vite can bundle it.
+      */}
       <div className="absolute inset-0 z-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1629281066736-ff3a1e6b36d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXIlMjBkZXRhaWxpbmd8ZW58MXx8fHwxNzYxNzQ0NzAzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Luxury car detailing"
+        <video
+          src={bgVideo}
           className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster=""
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50"></div>
       </div>
