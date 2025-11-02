@@ -26,8 +26,8 @@ export function Hero({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 's
           playsInline
           poster=""
         />
-  {/* 25% black overlay to darken the video for legibility */}
-  <div className="absolute inset-0 z-10 bg-black/25"></div>
+  {/* ~60% black overlay to darken the video for legibility (user requested 60-70%) */}
+  <div className="absolute inset-0 z-10 bg-black/60"></div>
   {/* subtle gradient on top of the base black layer for depth */}
   <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/40 via-black/30 to-black/20 pointer-events-none"></div>
       </div>
