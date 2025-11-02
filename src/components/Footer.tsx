@@ -100,8 +100,27 @@ export function Footer({ onNavigate }: FooterProps) {
             </ul>
           </div>
 
+          {/* Services (right of Quick Links) */}
+          <div>
+            <h3 className="text-xl mb-4">Our Services</h3>
+            <ul className="space-y-2">
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Engine Diagnostics</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Oil Change & Maintenance</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Brake Services</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Transmission Service</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">AC & Heating</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Electrical Systems</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Tire Services</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Suspension & Steering</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Cooling System</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">General Repairs</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Detailing Services</li>
+              <li className="text-gray-400 hover:text-blue-900 transition-colors">Emergency Services</li>
+            </ul>
+          </div>
+
           {/* Contact info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <h3 className="text-xl mb-4">Contact Info</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400">
