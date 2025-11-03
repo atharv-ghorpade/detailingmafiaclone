@@ -1,5 +1,7 @@
 ﻿{
-  "buildCommand": "node node_modules/vite/bin/vite.js build",
+  "buildCommand": "bash build.sh",
+  "outputDirectory": "build",
+  "installCommand": "npm install",
   "framework": null,
   "rewrites": [
     {
