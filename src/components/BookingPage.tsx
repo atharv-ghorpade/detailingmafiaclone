@@ -3,6 +3,13 @@ import { Calendar as CalendarIcon, Clock, Car, Truck, Check } from 'lucide-react
 import { Calendar } from './ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from './ui/alert-dialog';
+import {
   Select,
   SelectContent,
   SelectItem,
@@ -12,6 +19,7 @@ import {
 
 export function BookingPage() {
   const [date, setDate] = useState<Date | undefined>(undefined);
+  const [showAlert, setShowAlert] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
@@ -32,7 +40,23 @@ export function BookingPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Booking submitted:', { ...formData, date });
-    // Handle form submission
+    // Show the success alert
+    setShowAlert(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setShowAlert(false);
+      // Reset form
+      setFormData({
+        fullName: '',
+        phone: '',
+        email: '',
+        vehicleType: '',
+        vehicleNumber: '',
+        serviceType: '',
+        timeSlot: ''
+      });
+      setDate(undefined);
+    }, 5000);
   };
 
   const vehicleTypes = [
@@ -380,6 +404,22 @@ export function BookingPage() {
           </div>
         </div>
       </section>
+
+      {/* Success Alert Dialog */}
+      <AlertDialog open={showAlert} onOpenChange={setShowAlert}>
+        <AlertDialogContent className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-blue-900">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-2xl text-white">Appointment Booked!</AlertDialogTitle>
+            <AlertDialogDescription className="text-gray-300 text-base">
+              Your appointment is scheduled for {date ? date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              }) : 'the selected date'} at {formData.timeSlot}. We'll contact you shortly to confirm.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
