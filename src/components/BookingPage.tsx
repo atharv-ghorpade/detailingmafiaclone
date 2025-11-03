@@ -112,6 +112,31 @@ export function BookingPage() {
 
   return (
     <div className="pt-32 bg-white">
+      {/* Success Notification - Center Position */}
+      {showAlert && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 max-w-2xl w-full mx-4 animate-in zoom-in-95 duration-500">
+          <div className="bg-blue-900 p-8 rounded-lg shadow-[0_20px_60px_rgba(0,0,0,0.8),0_10px_30px_rgba(30,58,138,0.5)] border-2 border-blue-700" style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 15px 25px -5px rgba(30, 58, 138, 0.6), 0 10px 20px -5px rgba(0, 0, 0, 0.5)' }}>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <CheckCircle className="w-8 h-8 text-blue-900" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-3 drop-shadow-lg">Appointment Booked!</h3>
+                <p className="text-white text-base leading-relaxed drop-shadow-md">
+                  Your appointment is scheduled for {date ? date.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  }) : 'the selected date'} at {formData.timeSlot}. We'll contact you shortly to confirm.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1730453075684-2ad6232ab451?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBtYWludGVuYW5jZSUyMG1lY2hhbmljfGVufDF8fHx8MTc2MTg4NDYwOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')] bg-cover bg-center opacity-10"></div>
@@ -352,29 +377,6 @@ export function BookingPage() {
 
             {/* Features Sidebar */}
             <div className="space-y-6">
-              {/* Success Notification */}
-              {showAlert && (
-                <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6 rounded-lg shadow-2xl border border-blue-900 animate-in slide-in-from-top-4 duration-500">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
-                        <CheckCircle className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">Appointment Booked!</h3>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        Your appointment is scheduled for {date ? date.toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        }) : 'the selected date'} at {formData.timeSlot}. We'll contact you shortly to confirm.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-xl border-l-4 border-blue-900">
                   <h3 className="mb-4 text-black">

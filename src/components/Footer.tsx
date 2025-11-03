@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 
 interface FooterProps {
-  onNavigate: (page: 'home' | 'about' | 'services' | 'experience' | 'blog' | 'contact' | 'booking') => void;
+  onNavigate: (page: 'home' | 'about' | 'services' | 'service-detail' | 'experience' | 'blog' | 'contact' | 'booking', serviceTitle?: string) => void;
 }
 
 export function Footer({ onNavigate }: FooterProps) {

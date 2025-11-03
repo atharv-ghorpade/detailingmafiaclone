@@ -7,7 +7,7 @@ import {
 import { Button } from "./ui/button";
 import bgVideo from "../assets/videoplayback.mp4";
 
-export function Hero({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 'services' | 'experience' | 'blog' | 'contact' | 'booking') => void }) {
+export function Hero({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 'services' | 'service-detail' | 'experience' | 'blog' | 'contact' | 'booking', serviceTitle?: string) => void }) {
   return (
     <section
       id="home"

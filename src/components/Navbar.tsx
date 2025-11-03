@@ -16,6 +16,7 @@ interface NavbarProps {
     | "home"
     | "about"
     | "services"
+    | "service-detail"
     | "experience"
     | "blog"
     | "contact"
@@ -25,10 +26,12 @@ interface NavbarProps {
       | "home"
       | "about"
       | "services"
+      | "service-detail"
       | "experience"
       | "blog"
       | "contact"
       | "booking",
+    serviceTitle?: string
   ) => void;
 }
 
