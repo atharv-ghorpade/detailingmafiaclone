@@ -1,14 +1,7 @@
 import { useState } from 'react';
-import { Calendar as CalendarIcon, Clock, Car, Truck, Check } from 'lucide-react';
+import { Calendar as CalendarIcon, Clock, Car, Truck, Check, CheckCircle } from 'lucide-react';
 import { Calendar } from './ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from './ui/alert-dialog';
 import {
   Select,
   SelectContent,
@@ -42,21 +35,10 @@ export function BookingPage() {
     console.log('Booking submitted:', { ...formData, date });
     // Show the success alert
     setShowAlert(true);
-    // Reset form after 3 seconds
+    // Auto-hide notification after 8 seconds
     setTimeout(() => {
       setShowAlert(false);
-      // Reset form
-      setFormData({
-        fullName: '',
-        phone: '',
-        email: '',
-        vehicleType: '',
-        vehicleNumber: '',
-        serviceType: '',
-        timeSlot: ''
-      });
-      setDate(undefined);
-    }, 5000);
+    }, 8000);
   };
 
   const vehicleTypes = [
@@ -370,6 +352,29 @@ export function BookingPage() {
 
             {/* Features Sidebar */}
             <div className="space-y-6">
+              {/* Success Notification */}
+              {showAlert && (
+                <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6 rounded-lg shadow-2xl border border-blue-900 animate-in slide-in-from-top-4 duration-500">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-2">Appointment Booked!</h3>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Your appointment is scheduled for {date ? date.toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'long', 
+                          day: 'numeric' 
+                        }) : 'the selected date'} at {formData.timeSlot}. We'll contact you shortly to confirm.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-xl border-l-4 border-blue-900">
                   <h3 className="mb-4 text-black">
@@ -404,22 +409,6 @@ export function BookingPage() {
           </div>
         </div>
       </section>
-
-      {/* Success Alert Dialog */}
-      <AlertDialog open={showAlert} onOpenChange={setShowAlert}>
-        <AlertDialogContent className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-blue-900">
-          <AlertDialogHeader>
-            <AlertDialogTitle className="text-2xl text-white">Appointment Booked!</AlertDialogTitle>
-            <AlertDialogDescription className="text-gray-300 text-base">
-              Your appointment is scheduled for {date ? date.toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              }) : 'the selected date'} at {formData.timeSlot}. We'll contact you shortly to confirm.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-        </AlertDialogContent>
-      </AlertDialog>
     </div>
   );
 }
