@@ -7,7 +7,7 @@ export function HomePage({ onNavigate }: { onNavigate?: (page: 'home' | 'about' 
   return (
     <>
       <Hero onNavigate={onNavigate} />
-      <Services />
+      <Services onNavigate={onNavigate} />
       <WhyChooseUs />
       <Testimonials />
     </>
