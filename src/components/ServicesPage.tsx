@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-export function ServicesPage() {
+export function ServicesPage({ onNavigate }: { onNavigate?: (page: 'home' | 'about' | 'services' | 'experience' | 'blog' | 'contact' | 'booking') => void }) {
   const services = [
     {
       icon: Gauge,
@@ -253,7 +253,10 @@ export function ServicesPage() {
           </h2>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-            <button className="relative group">
+            <button 
+              className="relative group"
+              onClick={() => onNavigate?.('booking')}
+            >
               <div className="relative h-14 px-10 flex items-center justify-center cursor-pointer">
                 <div className="absolute inset-0 bg-blue-900 hover:bg-blue-800 transition-colors transform -skew-x-12"></div>
                 <span className="relative z-10 text-white uppercase tracking-wide">

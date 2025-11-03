@@ -62,7 +62,7 @@ export default function App() {
       <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
   {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
       {currentPage === 'about' && <AboutPage />}
-      {currentPage === 'services' && <ServicesPage />}
+      {currentPage === 'services' && <ServicesPage onNavigate={handleNavigate} />}
       {currentPage === 'experience' && <ExperiencePage />}
       {currentPage === 'blog' && <BlogPage />}
       {currentPage === 'contact' && <ContactPage />}
