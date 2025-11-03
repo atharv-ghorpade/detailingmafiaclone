@@ -1,4 +1,6 @@
 ﻿{
+  "buildCommand": "node node_modules/vite/bin/vite.js build",
+  "framework": null,
   "rewrites": [
     {
       "source": "/(.*)",
