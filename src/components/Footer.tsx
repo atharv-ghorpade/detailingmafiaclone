@@ -139,6 +139,24 @@ export function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
+        {/* Newsletter Section */}
+        <div className="border-t border-gray-800 py-8 mb-8">
+          <div className="max-w-lg mx-auto text-center">
+            <h3 className="text-2xl mb-2">Newsletter</h3>
+            <p className="text-gray-400 mb-6">Subscribe to get special offers and automotive tips.</p>
+            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Your email"
+                className="flex-1 px-4 py-2 rounded-lg bg-gray-900 text-white border border-gray-800 focus:border-blue-900 focus:outline-none"
+              />
+              <button className="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">

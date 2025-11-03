@@ -28,7 +28,7 @@ export function ServicesPage() {
         'Emission system checks',
         'Sensor diagnostics'
       ],
-      image: 'https://images.unsplash.com/photo-1642426312110-65ac029a400b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBlbmdpbmUlMjBkaWFnbm9zdGljfGVufDF8fHx8MTc2MTg1MDQ2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/engine diagnose.jpg'
     },
     {
       icon: Droplet,
@@ -40,7 +40,7 @@ export function ServicesPage() {
         'Multi-point inspection',
         'Tire pressure check'
       ],
-      image: 'https://images.unsplash.com/photo-1664346415660-b28b58c2442e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjBjaGFuZ2UlMjBzZXJ2aWNlfGVufDF8fHx8MTc2MTg5NTY3OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Oil Change & Maintenance.jpg'
     },
     {
       icon: CircleDot,
@@ -52,7 +52,7 @@ export function ServicesPage() {
         'Brake fluid flush',
         'ABS diagnostics'
       ],
-      image: 'https://images.unsplash.com/photo-1656232976683-7b688560e427?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFrZSUyMHJlcGFpcnxlbnwxfHx8fDE3NjE4OTU2Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Brake Services.jpg'
     },
     {
       icon: Settings,
@@ -64,7 +64,7 @@ export function ServicesPage() {
         'Transmission diagnostics',
         'Differential service'
       ],
-      image: 'https://images.unsplash.com/photo-1711199694531-e982a79ea381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB0cmFuc21pc3Npb258ZW58MXx8fHwxNzYxODYwMjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Transmission Service.jpg'
     },
     {
       icon: Snowflake,
@@ -76,7 +76,7 @@ export function ServicesPage() {
         'Compressor replacement',
         'System diagnostics'
       ],
-      image: 'https://images.unsplash.com/photo-1642426312110-65ac029a400b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBlbmdpbmUlMjBkaWFnbm9zdGljfGVufDF8fHx8MTc2MTg1MDQ2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/AC & Heating.jpg'
     },
     {
       icon: Zap,
@@ -88,7 +88,7 @@ export function ServicesPage() {
         'Starter motor repair',
         'Wiring diagnostics'
       ],
-      image: 'https://images.unsplash.com/photo-1664346415660-b28b58c2442e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjBjaGFuZ2UlMjBzZXJ2aWNlfGVufDF8fHx8MTc2MTg5NTY3OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Electrical Systems.jpg'
     },
     {
       icon: Car,
@@ -100,7 +100,7 @@ export function ServicesPage() {
         'Tire replacement',
         'TPMS service'
       ],
-      image: 'https://images.unsplash.com/photo-1656232976683-7b688560e427?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFrZSUyMHJlcGFpcnxlbnwxfHx8fDE3NjE4OTU2Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Tire Services.jpg'
     },
     {
       icon: Move,
@@ -112,7 +112,7 @@ export function ServicesPage() {
         'Alignment service',
         'Ball joint replacement'
       ],
-      image: 'https://images.unsplash.com/photo-1711199694531-e982a79ea381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB0cmFuc21pc3Npb258ZW58MXx8fHwxNzYxODYwMjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Suspension & Steering.jpg'
     },
     {
       icon: Thermometer,
@@ -124,7 +124,7 @@ export function ServicesPage() {
         'Thermostat replacement',
         'Water pump service'
       ],
-      image: 'https://images.unsplash.com/photo-1642426312110-65ac029a400b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBlbmdpbmUlMjBkaWFnbm9zdGljfGVufDF8fHx8MTc2MTg1MDQ2NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Cooling System.jpg'
     },
     {
       icon: Wrench,
@@ -136,7 +136,7 @@ export function ServicesPage() {
         'Fuel system service',
         'Pre-purchase inspection'
       ],
-      image: 'https://images.unsplash.com/photo-1664346415660-b28b58c2442e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjBjaGFuZ2UlMjBzZXJ2aWNlfGVufDF8fHx8MTc2MTg5NTY3OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/General Repairs.jpg'
     },
     {
       icon: Sparkles,
@@ -148,7 +148,7 @@ export function ServicesPage() {
         'Paint correction',
         'Ceramic coating'
       ],
-      image: 'https://images.unsplash.com/photo-1656232976683-7b688560e427?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFrZSUyMHJlcGFpcnxlbnwxfHx8fDE3NjE4OTU2Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/Detailing Services.jpg'
     },
     {
       icon: AlertCircle,
@@ -160,7 +160,7 @@ export function ServicesPage() {
         'Lockout service',
         'Towing available'
       ],
-      image: 'https://images.unsplash.com/photo-1711199694531-e982a79ea381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjB0cmFuc21pc3Npb258ZW58MXx8fHwxNzYxODYwMjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: '/engine diagnose.jpg'
     }
   ];
 

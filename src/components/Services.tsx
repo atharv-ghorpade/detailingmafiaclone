@@ -8,7 +8,7 @@ const services = [
     icon: Sparkles,
     title: 'Engine Diagnostics',
     description: 'Advanced computer diagnostics to identify and resolve engine issues quickly',
-    image: 'https://images.unsplash.com/photo-1629281066736-ff3a1e6b36d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXIlMjBkZXRhaWxpbmd8ZW58MXx8fHwxNzYxNzQ0NzAzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/engine_diagnostic.jpg',
     features: ['Computer Diagnostics', 'Engine Tune-up', 'Performance Testing', 'Problem Resolution'],
   },
   {
